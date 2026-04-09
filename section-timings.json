@@ -1,0 +1,8 @@
+[
+  {"id": "hero",     "scrollY": 72,   "durationMs": 3000,  "audioFile": "demo/section-0.mp3"},
+  {"id": "services", "scrollY": 890,  "durationMs": 3000,  "audioFile": "demo/section-1.mp3"},
+  {"id": "reviews",  "scrollY": 1651, "durationMs": 14629, "audioFile": "demo/section-2.mp3"},
+  {"id": "about",    "scrollY": 2166, "durationMs": 16115, "audioFile": "demo/section-3.mp3"},
+  {"id": "cta",      "scrollY": 2746, "durationMs": 12446, "audioFile": "demo/section-4.mp3"},
+  {"id": "closing",  "scrollY": 0,    "durationMs": 3000,  "audioFile": "demo/section-5.mp3"}
+]
