@@ -17,14 +17,20 @@
   --border-subtle: oklch(0.92 0.01 145);
 }
 
+@theme inline {
+  --color-background: oklch(0.98 0.008 145);
+  --color-foreground: oklch(0.20 0.025 145);
+}
+
 html {
   scroll-behavior: smooth;
   color-scheme: light;
+  background: oklch(0.98 0.008 145);
 }
 
 body {
-  background: var(--bg);
-  color: var(--text-primary);
+  background: var(--bg) !important;
+  color: var(--text-primary) !important;
   font-family: "Mulish", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
