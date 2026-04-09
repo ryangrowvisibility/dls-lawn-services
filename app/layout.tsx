@@ -1,29 +1,19 @@
 import type { Metadata } from "next";
-import { Josefin_Sans, Mulish } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const josefinSans = Josefin_Sans({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-display",
-});
-
-const mulish = Mulish({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-body",
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "DLS Lawn Services | Fresno Lawn Care — Reliable, Affordable, 5-Star Rated",
   description:
-    "DLS Lawn Services — Fresno's most reliable lawn care. Silvino and Miguel deliver beautiful yards at fair prices. Weekly maintenance, cleanups, landscaping. Call (559) 260-2945.",
+    "DLS Lawn Services — Fresno's most reliable lawn care. Weekly maintenance, cleanups, landscaping. Call Silvino at (559) 260-2945. 5 stars, 7 days a week.",
   keywords:
-    "lawn care Fresno, lawn mowing Fresno, lawn cleanup Fresno, landscaping Fresno, DLS Lawn Services, Silvino lawn care",
+    "lawn care Fresno, lawn mowing Fresno, lawn cleanup Fresno, landscaping Fresno, DLS Lawn Services",
   openGraph: {
-    title: "DLS Lawn Services | Fresno Lawn Care",
+    title: "DLS Lawn Services | Fresno Lawn Care — 5 Stars",
     description:
-      "Fresno's trusted lawn care team. Beautiful results, fair prices, 7 days a week. Call Silvino at (559) 260-2945.",
+      "Fresno's reliable lawn care team. Silvino delivers beautiful yards at fair prices. Call (559) 260-2945.",
     type: "website",
     locale: "en_US",
   },
@@ -35,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${josefinSans.variable} ${mulish.variable}`}>
+    <html lang="en">
       <head>
         <script
           type="application/ld+json"
@@ -57,7 +47,14 @@ export default function RootLayout({
               openingHoursSpecification: [
                 {
                   "@type": "OpeningHoursSpecification",
-                  dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Sunday"],
+                  dayOfWeek: [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Sunday",
+                  ],
                   opens: "06:00",
                   closes: "21:00",
                 },
@@ -73,9 +70,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body style={{ fontFamily: "var(--font-body), system-ui, sans-serif" }}>
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
